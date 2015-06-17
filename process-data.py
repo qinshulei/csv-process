@@ -53,7 +53,7 @@ class BatchProcessCSV:
                     if value_A:
                         value_A = value_A.strip()
                         value = map.get(value_A)
-                    if value != False:
+                    if value != False and value != "" and value != None:
                         writer.writerow([row[column.index("A")],value,row[column.index("C")],row[column.index("D")],row[column.index("E")],row[column.index("F")]])
                     else:
                         writer.writerow([row[column.index("A")],row[column.index("B")],row[column.index("C")],row[column.index("D")],row[column.index("E")],row[column.index("F")]])
